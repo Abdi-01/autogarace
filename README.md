@@ -4,11 +4,11 @@
 
 This is my personal mobile app project that I developed using React Native. An mobile app for car service business. This app being developed, and now on progress in front-end.
 
-!["login"](imgreadme/Login.png  | width=150)
-!["home"](imgreadme/Home.png | width=150)
-!["promo"](imgreadme/promo.png | width=150)
-!["cart"](imgreadme/Cart.png  | width=150)
-!["account"](imgreadme/Account.png  | width=150)
+!["login"](imgreadme/Login.png ){width="150px"}
+!["home"](imgreadme/Home.png){width="150px"}
+!["promo"](imgreadme/promo.png){width="150px"}
+!["cart"](imgreadme/Cart.png){width="150px"}
+!["account"](imgreadme/Account.png){width="150px"}
 
 ### Library Used (Front End)
 - [React Native](https://reactnative.dev/) for layouting and make component.
