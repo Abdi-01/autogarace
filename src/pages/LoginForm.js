@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Image, StyleSheet } from 'react-native'
 import { Text, Input, Icon, Button } from 'react-native-elements'
-import {StackActions} from '@react-navigation/native'
+import { StackActions } from '@react-navigation/native'
 import { connect } from 'react-redux'
 import { onInputForm, onUserKeepLogin, onUserLogin } from '../actions'
 
@@ -9,8 +9,8 @@ class Login extends React.Component {
     state = {}
 
     componentDidUpdate() {
-        if(this.props.user.username){
-            console.log('cek user',this.props.user.username)
+        if (this.props.user.username) {
+            console.log('cek user', this.props.user.username)
             this.props.navigation.dispatch(StackActions.replace('TabNav'))
             // this.props.navigation.navigate('TabNav')
         }
@@ -25,10 +25,10 @@ class Login extends React.Component {
     }
 
     render() {
-        if (this.props.user.authChecked && !this.props.user.username) {
+        if (this.props.user.autoChecked && !this.props.user.username) {
             return (
                 <View style={styles.containerStyle}>
-                    <Image source={require('../image/autogarace.png')} style={{ width: "35%", height: "18%" }} />
+                    <Image source={require('../image/autogarace.png')} style={{ width: 150,height:150 }} />
                     {/* <Text h3 style={{ color: '#F2962C' }}>AUTOGARACE</Text> */}
                     <View style={styles.inputContainerStyle}>
                         <Input placeholder="Username"
@@ -58,11 +58,11 @@ class Login extends React.Component {
             );
         }
         // else {
-            return (
-                <View style={styles.containerSplash}>
-                    <Image source={require('../image/autogarace.png')} style={{ width: "35%", height: "18%" }} />
-                </View>
-            )
+        return (
+            <View style={styles.containerSplash}>
+                <Image source={require('../image/autogarace.png')} style={{ width: "35%", height: "18%" }} />
+            </View>
+        )
         // }
     }
 }

@@ -44,3 +44,10 @@ export const onUserKeepLogin = () => {
         }
     }
 }
+
+export const onUserLogout = () => {
+    return async (dispatch) => {
+        await AsyncStorage.removeItem('username')
+        dispatch({ type: "USER_LOGIN_FAIL" })
+    }
+}

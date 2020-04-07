@@ -10,7 +10,10 @@ import Account from '../pages/Account'
 
 // const Tab = createBottomTabNavigator()
 const Tab = createMaterialTopTabNavigator()
-export default (props) => {
+const LogOutComp = (nav) => {
+    return ({ navigation }) => <Account navigation={navigation} rootStackNavigation={nav} />
+}
+export default ({ navigation }) => {
     return (
         <Tab.Navigator initialRouteName="Home"
             screenOptions={({ route }) => ({
@@ -51,7 +54,7 @@ export default (props) => {
             <Tab.Screen name="Promo" component={Promo} />
             {/* <Tab.Screen name="Contact" component={Contact} /> */}
             <Tab.Screen name="Cart" component={Cart} />
-            <Tab.Screen name="Account" component={Account} />
+            <Tab.Screen name="Account" >{LogOutComp(navigation)}</Tab.Screen>
         </Tab.Navigator>
     )
 }
